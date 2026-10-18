@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --color-bg: #120e0b;
+  --color-surface: #2a1d16;
+  --color-fg: #f6efe4;
+  --color-muted: #b5a28e;
+  --color-amber: #f0a030;
+  --color-ember: #e23d2b;
+  --color-line: #3d2c22;
+  --radius-xl: 1rem;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    margin: 0;
+    overflow: hidden;
+    font-family: var(--font-sans);
+  }
+}
+
+@utility touch-dock {
+  @media (pointer: fine) and (min-width: 801px) {
+    display: none;
+  }
+}
