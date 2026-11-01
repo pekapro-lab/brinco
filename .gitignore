@@ -10,3 +10,4 @@ artifacts
 .project_id
 .node_modules.lock
 .DS_Store
+dist-pages
